@@ -3,7 +3,6 @@
 </head>
 <body>
 
-
     <div class="footer"> 
     <p> Hier komt de footer </p>
     </div>
