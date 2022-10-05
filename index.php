@@ -1,4 +1,6 @@
 <?php
-include 'header.php';
+include_once("header.php");
 
-include 'footer.php';
+echo ("Hier komt de body content");
+
+include_once("footer.php");
