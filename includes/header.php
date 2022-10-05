@@ -1,7 +1,7 @@
 <!-- HEADER START -->
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="includes/styles.css">
     <link rel="icon" href="media/logo.png" type="image/png" />
 </head>
 
@@ -13,7 +13,6 @@
         <div class="button_header">
             <a class="button" href="index.php">Home</a>
             <a class="button" href="inlog.php">inloggen</a>
-            <a class="button" href="checkout.php">checkout</a>
         </div>
     </div>
 

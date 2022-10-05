@@ -1,7 +1,7 @@
 <!-- HEADER START -->
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="includes/styles.css">
     <link rel="icon" href="media/logo.png" type="image/png" />
 </head>
 

@@ -1,7 +1,7 @@
 <!-- FOOTER START -->
 
 <head>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="includes/styles.css">
 </head>
 
 <body>
