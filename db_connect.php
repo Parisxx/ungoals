@@ -1,9 +1,8 @@
+<!-- DATABASE CONNECTION START -->
 <?php
-
-
 function connect() {
     $host = '127.0.0.1';
-    $db   = 'dejavu.';
+    $db   = 'installatie-stassen';
     $user = 'root';
     $pass = '';
     $charset = 'utf8mb4';
@@ -20,4 +19,6 @@ function connect() {
     } catch (\PDOException $e) {
         throw new \PDOException($e->getMessage(), (int)$e->getCode());
     }
-} //end function connect
+} 
+
+// DATABASE CONNECTION END

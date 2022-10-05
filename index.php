@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once("dbconnection.php");
+include("db_connect.php");
 $pdo = connect();
 
 include_once("header.php");
