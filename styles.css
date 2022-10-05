@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(217, 217, 217);
+    background-color: #FBEAFF;
     font-size: 17px;
 }
 
@@ -23,6 +23,10 @@ body {
     padding: 15px;
     display: inline-block;
 
+}
+
+.button:hover {
+    background-color: #00C9A7;
 }
 
 .button_header {
@@ -48,7 +52,7 @@ body {
 }
 
 .mail_link:hover {
-    color: rgb(139, 106, 210);
+    color: #00C9A7;
 }
 
 /* FOOTER END */
