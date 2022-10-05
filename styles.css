@@ -1,7 +1,7 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(182, 115, 28);
+    background-color: rgb(217, 217, 217);
 }
 
 /* HEADER START */
@@ -13,7 +13,20 @@ body{
 
 /* FOOTER START */
 .footer{
-    background-color: aqua;
+    background-color: rgb(51, 25, 105);
+    color: white;
+    text-align: center;
+    margin-top: auto 0;
+    height: auto;
+}
+
+.mail_link{
+    text-decoration: none;
+    color: white;
+}
+
+.mail_link:hover{
+    color: rgb(139, 106, 210);
 }
 /* FOOTER END */
 
