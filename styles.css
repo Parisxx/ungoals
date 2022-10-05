@@ -1,4 +1,9 @@
 body{
     margin: 0;
     padding: 0;
+    background-color: rgb(182, 115, 28);
+}
+
+.footer{
+    background-color: aqua;
 }

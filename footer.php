@@ -2,7 +2,11 @@
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+
+    <div class="footer"> 
     <p> Hier komt de footer </p>
+    </div>
 </body>
 
 <?php
