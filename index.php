@@ -1,20 +1,20 @@
 <?php
 session_start();
-include("db_connect.php");
+include("includes/db_connect.php");
 $pdo = connect();
 $stmt = $pdo->query("SELECT * FROM product");
 
-include_once("header.php");
+include_once("includes/header.php");
 
 while ($data = $stmt->fetch())
 {
-  echo "<div class='wrapper_product'>";
-  echo "<p class='product'>" . $data['name'] . "</p>";
-  echo "<p class='product'>" . $data['price'] . "</p>";
+  echo "<div class='product_wrapper'>";
+  echo "<h1 class='product'>" . $data['name'] . "</h1>";
+  echo "<h3 class='product'>€" . $data['price'] . "</h3>";
   echo "<p class='product'>" . $data['location'] . "</p>";
+  echo "<img src='uploads/" . $data['picture'] .".png' width='100' height='100'>";
   echo "</div>";
 }
 
-echo ("Hier komt de body content");
 
-include_once("footer.php");
+include_once("includes/footer.php");

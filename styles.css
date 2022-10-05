@@ -60,12 +60,11 @@ body {
 
 /* PRODUCTS START */
 .product_wrapper{
-
-
+    display: inline-block;
+    padding: 1%;
 }
 
 .product{
-
 
 }
 /* PRODUCTS END */
