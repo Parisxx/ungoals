@@ -8,6 +8,11 @@ body{
 .header{
     background-color: rgb(51, 25, 105);
 }
+.logo{
+    margin-left: 10px;
+    width: 150px;
+    height: 150px;
+}
 /* HEADER END */
 
 

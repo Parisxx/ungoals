@@ -8,7 +8,7 @@
 <body>
     <div class="header">
         <a href="index.php">
-            <img src="media/logo.png" width="150" height="150">
+            <img class= "logo"src="media/logo.png" width="150" height="150">
         </a>
 
     </div>
