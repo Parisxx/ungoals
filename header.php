@@ -1,4 +1,4 @@
-<!-- FOOTER START -->
+<!-- HEADER START -->
 
 <head>
     <link rel="stylesheet" href="styles.css">
@@ -7,11 +7,11 @@
 
 <body>
     <div class="header">
-        
+
     </div>
 </body>
 
-<!-- FOOTER END -->
+<!-- HEADER END -->
 
 
 
