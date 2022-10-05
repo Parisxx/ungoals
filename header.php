@@ -3,7 +3,10 @@
 <link rel="icon" href="media/icon.png" type="image/png" />
 </head>
 <body>
-    <p> Hier komt de header </p>
+<div class="header">
+
+
+
 </body>
 
 <?php
