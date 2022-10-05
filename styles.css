@@ -26,8 +26,8 @@ body {
 
 .button_header {
     margin-right: 50px;
-
-
+float: right ;
+margin-top: 50px;
 }
 
 /* HEADER END */
