@@ -1,3 +1,5 @@
+<!-- FOOTER START -->
+
 <head>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,3 +16,5 @@
         </p>
     </div>
 </body>
+
+<!-- FOOTER END -->
