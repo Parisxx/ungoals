@@ -1,37 +1,53 @@
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(217, 217, 217);
 }
 
 /* HEADER START */
-.header{
+.header {
     background-color: rgb(51, 25, 105);
 }
-.logo{
+
+.logo {
     margin-left: 10px;
     width: 150px;
     height: 150px;
 }
+
+.button {
+    text-decoration: none;
+    color: white;
+    background-color: rgb(255, 0, 0);
+    padding: 2px;
+    display: inline-block;
+
+}
+
+.button_header {
+    margin-right: 50px;
+
+
+}
+
 /* HEADER END */
 
 
 /* FOOTER START */
-.footer{
+.footer {
     background-color: rgb(51, 25, 105);
     color: white;
     text-align: center;
     margin: auto 0;
 }
 
-.mail_link{
+.mail_link {
     text-decoration: none;
     color: white;
 }
 
-.mail_link:hover{
+.mail_link:hover {
     color: rgb(139, 106, 210);
 }
+
 /* FOOTER END */
-
-
