@@ -7,8 +7,8 @@
 
 <body>
     <div class="header">
-        <a href="https://www.w3schools.com">
-            <img src="media/logo.png" width="100" height="100">
+        <a href="index.php">
+            <img src="media/logo.png" width="150" height="150">
         </a>
 
     </div>
