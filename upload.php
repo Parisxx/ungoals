@@ -14,7 +14,11 @@ echo "<p> Price </p>";
 echo "<input class='form' type='number' name='price' required>";
 echo "<p> Location </p>";
 echo "<input class='form' type='text' name='location' required>";
+echo "<br>";
+echo "<br>";
 echo "<input type='file' name='file' required>";
+echo "<br>";
+echo "<br>";
 echo "<input class='upload_button' type='submit' name='submit' value='Upload'>";
 echo "</form>";
 
