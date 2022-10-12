@@ -5,7 +5,30 @@ $pdo = connect();
 $stmt = $pdo->query("SELECT * FROM user");
 include ("includes/functions.php");
 
+login_user($conn);
+errors();
+add();
+
 include_once("includes/header.php");
+
+
+echo "<form action='index_ingelogd.php' method='post'>";
+echo "<h1>Login</h1>";
+echo "<p>Username</p>";
+echo "<input type='text' name='username' required>";
+echo "<p>Password</p>";
+echo "<input type='password' name='password' required>";
+echo "<button name='submit' type='submit'>Login</button>";
+echo "</form>";
+
+
+
+
+
+
+
+
+
 
 // echo "form method='post' action='check.php'";
 // echo "Gebruikersnaam= 'input type='text' name='username' size='20' maxlength='20'";
