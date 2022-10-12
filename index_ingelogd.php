@@ -17,23 +17,18 @@ while ($data = $stmt->fetch())
   echo "<img src='uploads/" . $data['picture'] ."' width='100' height='100'>";
 
   echo "<form action='index_ingelogd.php' method='post'>";
-  echo "<button  value='" . $data['id'] . "' name='submit' type='submit'>Add to cart</button>";
-  echo "</form>";
-
-  echo "<form action='index_ingelogd.php' method='post'>";
-  echo "<button  value='" . $data['id'] . "' name='submit' type='submit'>Add to cart</button>";
+  echo "<button  value='" . $data['id'] . "' name='product_id' type='submit'>Add to cart</button>";
   echo "</form>";
 
   echo "</div>";
 }
 
 
-    if(isset($_POST['submit']))
+    if(isset($_POST['product_id']))
     {
-        $user_id= $_POST['user_id'];
         $product_id = $_POST['product_id'];
 
-        $sql = "INSERT INTO checkout (user_id, product_id) VALUES ('$user_id','$product_id')";
+        $sql = "INSERT INTO checkout (product_id) VALUES ('$product_id')";
         $result = $pdo->query($sql);
         
   
