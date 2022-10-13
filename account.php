@@ -7,18 +7,16 @@ $stmt = $pdo->query("SELECT * FROM user");
 include_once("includes/header_ingelogd.php");
 
 $email = $_SESSION["user"];
-$sql = "SELECT * FROM login WHERE email = '" .$email."'";
-$result = $conn->query($sql);
+$sql = "SELECT * FROM user WHERE email = '" .$email."'";
+$result = $pdo->query($sql);
 
-while($row = $result->fetch(PDO::FETCH_ASSOC)){
-    $email = $row['email'];
-    $first = $row['firstname'];
-    $last = $row['lastname'];
 
-    echo "<p id='email1'>Your email is:</p>";
-    echo "<p id='email'>$email</p>";
-    echo "<p id='name1'>Your Full Name is:</p>";
-    echo "<p id='name'>$first $last</p>";
+
+while ($data = $stmt->fetch())
+{
+  echo "<div class='account_wrapper'>";
+  echo "<p>Email: " . $data['email'] . "</p>";
+  echo "</div>";
 }
 
 

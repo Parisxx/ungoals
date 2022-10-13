@@ -36,6 +36,15 @@ if(isset($_POST['submit'])) {
         if ($checkpwd === false) {
             header("Location: inlog.php?error=wrong_pass");
             exit();
+        } else {
+            session_start();
+            if ($user['user_type'] == "admin") {
+                exit();
+            } else {
+                $_SESSION["user"] = $user['email'];
+                header("Location: index_ingelogd.php");
+                exit();
+            }
         }
     }
 }
