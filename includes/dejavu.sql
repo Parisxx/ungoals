@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Gegenereerd op: 05 okt 2022 om 11:14
--- Serverversie: 10.4.22-MariaDB
--- PHP-versie: 8.1.1
+-- Gegenereerd op: 13 okt 2022 om 10:12
+-- Serverversie: 10.4.24-MariaDB
+-- PHP-versie: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -33,6 +33,19 @@ CREATE TABLE `checkout` (
   `product_id` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `checkout`
+--
+
+INSERT INTO `checkout` (`id`, `user_id`, `product_id`) VALUES
+(12, '', '1'),
+(13, '', '1'),
+(14, '', '1'),
+(15, '', '1'),
+(16, '', '2'),
+(17, '', '2'),
+(18, '', '2');
+
 -- --------------------------------------------------------
 
 --
@@ -47,6 +60,14 @@ CREATE TABLE `product` (
   `picture` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Gegevens worden geëxporteerd voor tabel `product`
+--
+
+INSERT INTO `product` (`id`, `name`, `price`, `location`, `picture`) VALUES
+(1, 'Jas', '10', 'maastricht', 'shirt.png'),
+(2, 'Shirt', '5', 'maastricht', 'shirt.png');
+
 -- --------------------------------------------------------
 
 --
@@ -60,6 +81,15 @@ CREATE TABLE `user` (
   `pfp` varchar(255) NOT NULL,
   `adress` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Gegevens worden geëxporteerd voor tabel `user`
+--
+
+INSERT INTO `user` (`id`, `email`, `password`, `pfp`, `adress`) VALUES
+(2, 'test@gmail.com', '$2y$10$5fAFkrnWbIPiNgYz5V47mOl5FGsGu35lxKUMYevLEXN1uc/0.Hl8a', '', ''),
+(3, 'parisstassen@gmail.com', '$2y$10$pLRpikrgZDCBuUXfr0DyleRMJ9KBDJOn58.kwEL3aF9AmaqGKLXwq', '', ''),
+(4, 'vigo@gmail.com', '$2y$10$XHv6V7DWOa7E4hdJQp/hNu3Ob6buZbwuSuXkCKJLWz53xx6S5yAx6', '', '');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -91,19 +121,19 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT voor een tabel `checkout`
 --
 ALTER TABLE `checkout`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT voor een tabel `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT voor een tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
