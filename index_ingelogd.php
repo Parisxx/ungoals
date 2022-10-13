@@ -3,7 +3,6 @@ session_start();
 include("includes/db_connect.php");
 $pdo = connect();
 $stmt = $pdo->query("SELECT * FROM product");
-include ("includes/functions.php");
 
 include_once("includes/header_ingelogd.php");
 

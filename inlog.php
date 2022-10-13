@@ -3,76 +3,52 @@ session_start();
 include("includes/db_connect.php");
 $pdo = connect();
 $stmt = $pdo->query("SELECT * FROM user");
-include ("includes/functions.php");
-
-login_user($conn);
-errors();
-add();
 
 include_once("includes/header.php");
 
 
-echo "<form action='index_ingelogd.php' method='post'>";
+echo "<form action='' method='post'>";
 echo "<h1>Login</h1>";
-echo "<p>Username</p>";
-echo "<input type='text' name='username' required>";
+echo "<p>Email</p>";
+echo "<input type='email' name='email' required>";
 echo "<p>Password</p>";
 echo "<input type='password' name='password' required>";
 echo "<button name='submit' type='submit'>Login</button>";
 echo "</form>";
+echo "<form action='registreer.php'>";
+echo "<p>Don't have an account?</p>";
+echo "<button type='submit'>Register</button>";
+echo "</form>";
 
+if(isset($_POST['submit'])) {
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $stmt = $pdo->query("SELECT * FROM user WHERE email = '" . $email . "'");
+    $user = $stmt->fetch();
 
+    if ($user == 0) {
+        header("Location: inlog.php?error=wrong_email");
+        exit();
+    } else {
+        $pwdHashed = $user["password"];
+        $checkpwd = password_verify($password, $pwdHashed);
 
+        if ($checkpwd === false) {
+            header("Location: inlog.php?error=wrong_pass");
+            exit();
+        } else {
+            session_start();
+            if ($user['user_type'] == "admin") {
+                exit();
+            } else {
+                $_SESSION["user"] = $user['email'];
+                header("Location: index_ingelogd.php");
+                exit();
+            }
+        }
+    }
+}
 
-
-
-
-
-
-
-// echo "form method='post' action='check.php'";
-// echo "Gebruikersnaam= 'input type='text' name='username' size='20' maxlength='20'";
-// echo "Wachtwoord: 'input type='password' name='wachtwoord' size='20' maxlength='20'";
-// echo "input type='submit' value='Log in!'";
-
-
-// //kleine letters
-// $naam = strtolower($_POST['username']);
-// $wachtwoord = ($_POST['wachtwoord']);
-
-// //gebruikersnamen.
-// $gebruikers = array(
-//     'test' => 'wachtwoord',
-//     'gebruikersnaam2' => 'wachtwoord2'
-//     //enz
-// );
-
-// //bestaat het?, zoja:
-// if(isset($gebruikers[$naam]))
-//     {
-//          //als het wachtwoord gelijk is aan wat er in de variabele zit:
-//         if($wachtwoord == $gebruikers[$naam])
-//             {
-//                 //zet variabele zo dat het script het herkent als ingelogd
-//                 $_SESSION['login'] = "1";
-
-//                 //zet naam in variabele, zodat het later nog gebruikt kan worden
-//                 $_SESSION['login-naam'] = $naam;
-
-//                 //laat de beveiligde pagina zien
-//                 include ("index_ingelogd.php");
-//             }
-//         //als het wachtwoord niet klopt:
-//         else
-//             {
-//                 echo 'Wachtwoord is onjuist. Probeer het nog eens. :)';
-//             }
-//     }
-// //als de gebruikersnaam niet bekend is:
-// else
-//     {
-//         echo 'Onbekende gebruikersnaam.';
-//     }
 
 include_once("includes/footer.php");
 
