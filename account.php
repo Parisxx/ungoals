@@ -18,6 +18,10 @@ while ($data = $stmt->fetch())
   echo "<p>Email: " . $data['email'] . "</p>";
   echo "</div>";
 }
-
+echo "<hr>";
+echo "<form action='upload.php'>";
+echo "<p>Upload an item</p>";
+echo "<button type='submit'>Upload</button>";
+echo "</form>";
 
 include_once("includes/footer.php");
